@@ -12,7 +12,6 @@ df$Term[df$Term=="CT6"]<-6;
 df$Term[df$Term=="CT7"]<-7;
 df$Term[df$Term=="CT8"]<-8;
 
-
 #Now we can partiton the df by student name.
 unique_names<-unique(unlist(df$`Student Name`));
 list_by_student<-split(df, f = df$`Student Name`);
@@ -24,12 +23,12 @@ names(student_df)<-c("Name", "Mean_Final");
 #Include each student and their mean final grade
 foreach(n = names(list_by_student)) %do% {
   temp<-as.data.frame(get(n, list_by_student));
-  temp_row<-data.frame("Name" = paste0(n), "Mean_Final" = mean(temp$FinalGrade), "Num_Terms" = length(temp$FinalGrade));
+  temp_row<-data.frame("Name" = paste0(n), "Mean_Final" = mean(temp$FinalGrade), "Num_Courses" = length(temp$FinalGrade));
   student_df<-rbind(student_df,temp_row);
-  
-  
+  #We need to include something like RSI for students, over the term.
 }
 
-
-
+# https://artax.karlin.mff.cuni.cz/r-help/library/TTR/html/changes.html -- ROC indicator
+# sort http://www.statmethods.net/management/sorting.html
+#hplot<-ggplot(data=student_df, aes(student_df$Mean_Final)) +geom_histogram(aes(y=..density..))+geom_density(col="red")+labs(title="Histogram for Mean Final Grade")+labs(x="Mean Final Grade", y="Density")
 # write.xlsx(x = obj, file = "output/RetentionByStudent.xlsx", row.names = FALSE); # Write the data.
