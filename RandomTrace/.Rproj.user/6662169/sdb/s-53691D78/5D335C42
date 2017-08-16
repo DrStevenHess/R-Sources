@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1500068146898.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "5D335C42",
+    "lastKnownWriteTime" : 9007667413647461,
+    "last_content_update" : 1500068146898,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "AD162D1E",
+        "caption" : "edata",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=edata&cache_key=AD162D1E",
+        "displayedObservations" : 751,
+        "environment" : "",
+        "object" : "edata",
+        "preview" : 0,
+        "totalObservations" : 751,
+        "variables" : 3
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
